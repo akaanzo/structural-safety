@@ -1,0 +1,43 @@
+% !TeX spellcheck = it_IT
+% !TeX encoding = UTF-8
+\documentclass[a4paper, oneside, openright]{report}
+
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{stanli}
+\usepackage{subfig}
+\usepackage{amsmath,amsfonts,amssymb,braket}
+\usepackage{graphicx} %Loading the package
+\graphicspath{{img/}} %Setting the graphicspath
+\usepackage{plain}
+\usepackage{caption}
+\usepackage{xcolor}
+\usepackage{epsfig}
+\usepackage{environ}
+\usepackage{lipsum}
+\usepackage{siunitx}
+
+\newcommand{\contentinput}[1]{\input{input/#1}}
+
+\newenvironment{changegeometry}[1]
+{\newgeometry{#1}}
+{\cleardoublepage\restoregeometry}
+
+\newcommand{\blankpage}{\newpage\shipout\null\stepcounter{page}}%
+\def\doubleunderline#1{\underline{\underline{#1}}}%
+
+\begin{document}
+\contentinput{title}
+
+\contentinput{toc}
+\contentinput{intro}
+
+
+
+\end{document}
