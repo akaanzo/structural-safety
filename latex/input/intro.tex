@@ -1,6 +1,6 @@
 \pagestyle{plain}
 \pagenumbering{arabic}
-\chapter{Introduzione}
+\chapter{Introduzione}\label{chap:intro}
 Il seguente testo si propone come relazione relativa all'esercitazione di \emph{Sicurezza Strutturale} del Corso di Laurea Magistrale in Ingegneria Civile. Nelle seguenti righe si riportano stralci del testo della suddetta esercitazione, con lo scopo di descrivere l'edificio oggetto d'esame.
 
 \section{Descrizione dell'edificio}\label{sec:descrizioneEdificio}
@@ -37,20 +37,22 @@ Di seguito sono descritte le caratteristiche geometriche relative agli elementi 
 
 Con riferimento a quanto descritto sopra, si allegano gli elaborati grafici forniti nel testo dell'esercitazione, in modo tale da avere un quadro generale del problema.
 \cleardoublepage
-\pagestyle{empty}{
+%\pagestyle{empty}{
 \includepdf[pages=2,pagecommand={}, angle=90, width=\textwidth]{../Esercitazione_01}
 \includepdf[pages=3,pagecommand={}, angle=90, width=\textwidth]{../Esercitazione_01}
 \includepdf[pages=4,pagecommand={}, angle=90, width=\textwidth]{../Esercitazione_01}
 \includepdf[pages=5,pagecommand={}, angle=90, width=\textwidth]{../Esercitazione_01}
 \includepdf[pages=6,pagecommand={}, angle=90, width=\textwidth]{../Esercitazione_01}
-}
+%}
 \cleardoublepage
-\pagestyle{plain}
+%\pagestyle{plain}
 Secondo le indicazioni riportate nel testo, con riferimento all'inziale del cognome dello studente, in questo documento si tratterà la trave al \emph{piano primo} da $P13 \div P18$ al \emph{vano scala}, e i pilastri $P27$ e $P36$ come segnati in figura~\ref{fig:pianoPrimo}.
 \begin{figure}
  \centering
- \includegraphics[height=.6\textheight]{../../pianoPrimo_esercitazione.png}
+ \includegraphics[width=\textwidth]{../../pianoPrimo_esercitazione.png}
  \caption{Elementi strutturali in esame per il \emph{gruppo 2}}
  \label{fig:pianoPrimo}
 \end{figure}
 
+Si richiede di determinare le sollecitazioni di progetto agli \emph{Stati Liminte Ultimi} e agli \emph{Stati Limite di Esercizio} di momento flettente e taglio sulla trave e di azione assiale sui pilastri indicati sopra. 
+\cleardoublepage
