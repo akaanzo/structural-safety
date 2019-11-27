@@ -1,5 +1,5 @@
 \section{Analisi dei Carichi}\label{sec:loads}
-Come è possibile vedere in figura~\ref{fig:pianoPrimo} a pagina precedente, la trave in esame, che si trova al secondo impalcato (piano primo), è una trave perimetrale di sezione $30\times 50\,\si{cm}$.
+ La trave in esame, che si trova al secondo impalcato (piano primo), è una trave perimetrale; le dimensioni della sezione, perciò, sono $30\times 50\,\si{cm}$ rispettivamente per la base e per l'altezza della trave.
 
 \begin{figure}
  \centering
@@ -11,4 +11,64 @@ Come è possibile vedere in figura~\ref{fig:pianoPrimo} a pagina precedente, la 
  \caption{Sezione della trave in cemento armato}
  \label{fig:beamSec}
 \end{figure}
+
+Come si può notare dalla figura~\ref{fig:pianoPrimo}, essendo la trave perimetrale, divide due ambienti: l'ambiente interno adibito ad uffici aperti al pubblico e il terrazzo esterno. Sarà, quindi,  necessario calcolare i carichi separatamente per la zona interna e per la zona esterna.
+
+Nei seguenti paragrafi verranno elencati i carichi agenti sulla trave.
+
+\subsection{Carichi permanenti strutturali}
+Per quanto riguarda i carichi permanenti strutturali, questi si identificano nel \emph{peso proprio della trave} e nel \emph{peso proprio del solaio strutturale}; entrambi sono stati definiti nel capitolo~\ref{chap:intro}, rispettivamente pari a
+\begin{equation*}
+ G_{1k, t} = \gamma_{cls}\cdot B\cdot H = 25\,\dfrac{kN}{m^3} \cdot 0.30\,\si{m}\cdot 0.50\,\si{m} = 3.75\,\dfrac{kN}{m}
+\end{equation*}
+per la trave, dove $B$ è la base e $H$ è l'altezza della sezione. Mentre il peso del solaio strutturale è
+\begin{equation*}
+ g_{1k, s} = 3.20\,\dfrac{kN}{m^2}
+\end{equation*}
+
+\subsection{Carichi permanenti non strutturali}
+Al contrario dei carichi strutturali, che in questo caso sono i medesimi e per il solaio interno e per il terrazzo, i carichi non strutturali si distinguono in funzione dell'ambiente.
+
+\subsubsection*{Solaio interno}
+
+\begin{align*}
+ g_{2k, sottofondo} &= \gamma_{cls, all}\cdot s_{sottofondo} = 16\,\dfrac{kN}{m^3}\cdot 0.08\,\si{m} = 1.28\,\dfrac{kN}{m^2}\\
+ g_{2k, massetto} &= \gamma_{massetto}\cdot
+ s_{massetto} = 24\,\dfrac{kN}{m^3}\cdot 0.06\,\si{m} = 1.44\,\dfrac{kN}{m^2}\\
+ g_{2k, pavimento} &= 0.50\,\dfrac{kN}{m^2}\\
+ g_{2k, intonaco} &= \gamma_{intonaco}\cdot s_{intonaco} = 20\,\dfrac{kN}{m^3}\cdot 0.01\,\si{m} = 0.20\,\dfrac{kN}{m^2}
+\end{align*}
+
+Discorso diverso per quanto riguarda le divisorie interne. Il peso per unità di lunghezza della tramezza in laterizio è di 
+\begin{align*}
+ G_{2, div} &= \gamma_{div} \cdot s_{div} \cdot H_{div} + 2 \cdot \gamma_{intonaco} \cdot s_{intonaco} \cdot h_{div} =\\ &= 8.00\,\dfrac{kN}{m^3}\cdot 0.08\,\si{m} \cdot (3.10 - 0.25)\,\si{m} + 20\,\dfrac{kN}{m^3}\cdot 0.01\,\si{m} \cdot (3.10 - 0.25 - 0.01)\,\si{m}=\\ &= 2.96\,\dfrac{kN}{m}
+ \end{align*}
+ 
+ La normativa consente di convertire il carico per unità di lunghezza  delle divisorie in un carico uniformemente distribuito su un'area. Per elementi divisori con $2<G_2 \geq 3\,kN/_m$ si ha
+ \[
+  g_{2k, div} = 1.20\,\dfrac{kN}{m^2}
+ \]
+ 
+ In definitiva, per il solaio interno, i carichi permanenti non strutturali valgono
+ \begin{align*}
+	g_{2k, interno} &= g_{2k, sottofondo} + g_{2k, massetto} + g_{2k, pavimento} + g_{2k, intonaco} + g_{2k, div}=\\ &= (1.28 + 1.44 + 0.50 + 0.20 + 1.20)\,\dfrac{kN}{m^2} =\\&=
+	4.62\,\dfrac{kN}{m^2}
+ \end{align*}
+ 
+ \subsubsection*{Solaio terrazza}
+ Il solaio della terrazza si distingue da quello interno principalmente per la pavimentazione e per la presenza dell'solante termico.
+
+\begin{align*}
+ g_{2k, isolante} &= \gamma_{isolante}\cdot s_{isolante} = 0.50\,\dfrac{kN}{m^3}\cdot 0.15\,\si{m} = 0.075\,\dfrac{kN}{m^2}\\
+ g_{2k, massetto} &= \gamma_{massetto}\cdot s_{massetto} = 24\,\dfrac{kN}{m^3}\cdot 0.06\,\si{m} = 1.44\,\dfrac{kN}{m^2}\\
+ g_{2k, pavimento} &= 0.50\,\dfrac{kN}{m^2}\\
+ g_{2k, intonaco} &= \gamma_{intonaco}\cdot s_{intonaco} = 20\,\dfrac{kN}{m^3}\cdot 0.01\,\si{m} = 0.20\,\dfrac{kN}{m^2}
+\end{align*}
+
+Sommando i contributi dei singoli carichi distribuiti si ottiene il valore finale per la terrazza
+ \begin{align*}
+	g_{2k, terrazza} &= g_{2k, isolante} + g_{2k, massetto} + g_{2k, pavimento} + g_{2k, intonaco} =\\ &= (0.075 + 1.44 + 0.50 + 0.20)\,\dfrac{kN}{m^2} =\\&=
+	2.215\,\dfrac{kN}{m^2}
+ \end{align*}
+
 
