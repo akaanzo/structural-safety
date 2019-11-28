@@ -23,7 +23,7 @@ Per quanto riguarda i carichi permanenti strutturali, questi si identificano nel
 \end{equation*}
 per la trave, dove $B$ è la base e $H$ è l'altezza della sezione. Mentre il peso del solaio strutturale è
 \begin{equation*}
- g_{1k, s} = 3.20\,\dfrac{kN}{m^2}
+ g_{1k, solaio} = 3.20\,\dfrac{kN}{m^2}
 \end{equation*}
 
 \subsection{Carichi permanenti non strutturali}
@@ -71,4 +71,51 @@ Sommando i contributi dei singoli carichi distribuiti si ottiene il valore final
 	2.215\,\dfrac{kN}{m^2}
  \end{align*}
 
+\subsubsection*{Tamponamenti perimetrali}
+Il peso della muratura perimetrale ricade nei carichi permanenti non strutturali. Secondo quanto descritto nel capitolo~\ref{chap:intro}, la stratigrafia della parete è quella descritta in figura~\ref{fig:stratigrafiaTamponamento}
+
+\begin{figure}
+ \centering
+ \begin{tikzpicture}[scale=.5]
+  \draw (0,0) rectangle (3, 10);
+    \foreach \y in {0, .4, ..., 10}
+	\draw (0, \y) -- (3, \y);
+	
+	\foreach \x in {0, .4, ..., 3}
+		\draw (\x, 0) -- (\x, 10);
+
+\node at (1.5, 5) [fill=white, rotate=90] {$laterizio$};
+
+ \draw [fill=black] (3,0) rectangle (3.1, 10);
+ \draw [->, thin] (3.05, 5) -- +(1, 0) node [anchor = west] {$intonaco$};
+ 
+ \draw[pattern=north east lines] (0,0) rectangle (-1.2, 10);
+ \node at (-.6, 5) [fill=white, rotate=90] {$cappotto$};
+ 
+ \draw[|-|, thin] (-1.2, -2) -- (0, -2);\draw[-|, thin] (0, -2) -- (3, -2); \draw[-|, thin](3, -2) -- (3.1, -2);
+ \node at (-.6, -1.8) [anchor=south] {$12\si{cm}$};
+  \node at (1.5, -1.8) [anchor=south] {$30\si{cm}$};
+   \node at (3.2, -1.8) [anchor=south] {$1\si{cm}$};
+ \end{tikzpicture}
+ \caption{Stratigrafia tamponamento perimetrale}
+ \label{fig:stratigrafiaTamponamento}
+\end{figure}
+
+Il carico, che risulterà essere distribuito lungo una linea e gravante direttamente sulla trave, ha valore
+\begin{align*}
+ G_{2k, tamp} &= \gamma_{tamp} \cdot s_{tamp} \cdot h_{piano} + \gamma_{cappotto} \cdot s_{cappotto} \cdot h_{piano} + \gamma_{intonaco} \cdot s_{intonaco} \cdot h_{piano} =\\
+ &= \left(10\,\dfrac{kN}{m^3}\cdot 0.30\,\si{m} + 0.20\,\dfrac{kN}{m^3}\cdot 0.12\,\si{m} + 20\,\dfrac{kN}{m^3}\cdot 0.01\,\si{m}\right)\cdot 2.85\,\si{m} = 9.20\,\dfrac{kN}{m}
+\end{align*}
+
+
+\subsection{Carichi variabili}
+Come già detto in precedenza, la trave è una trave perimetrale che divide due ambienti: un ambiente interno adibito a uffici aperti al pubblico e una terrazza esterna soggetta alle azioni meteorologiche. Si ha la necessità, anche in questo caso, di suddividere i carichi variabili dei due differenti ambienti.
+
+\subsubsection*{Solaio interno}
+Il solaio interno deve essere progettato per sostenere degli uffici aperti al pubblico. Seguendo quanto descritto nelle \emph{NTC 2018}, in particolare nella \textbf{Tab. 3.1.II}, la categoria in cui si ricade è la \emph{B2}. 
+
+Si deduce che il valore del sovraccarico è di 
+\[
+ q_{k, CAT.\,B2} = 3\,\dfrac{kN}{m^3}
+\]
 
