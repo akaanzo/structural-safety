@@ -5,3 +5,5 @@ There is a notebook [___loads___](./loads.ipynb) about calculation of loads acti
 ![Problem](/pianoPrimo_esercitazione.png)
 ![Shear Envelope](/export/img/shearEnvelope_slu.jpg)
 ![Bending Moment Envelope](/export/img/bendingMomentEnvelope_slu.jpg)
+
+Moreover, the LaTeX report title page is based on [Nicola Meoli project](https://github.com/sononicola/Topografia_Relazione).
