@@ -1,3 +1,7 @@
+% !TeX spellcheck = it_IT
+% !TeX encoding = UTF-8
+\UseRawInputEncoding
+
 \section{Analisi dei Carichi}\label{sec:loads}
  La trave in esame, che si trova al secondo impalcato (piano primo), Ã¨ una trave perimetrale; le dimensioni della sezione, perciÃ², sono $30\times 50\,\si{cm}$ rispettivamente per la base e per l'altezza della trave.
 
@@ -39,7 +43,8 @@ Al contrario dei carichi strutturali, che in questo caso sono i medesimi e per i
  g_{2k, intonaco} &= \gamma_{intonaco}\cdot s_{intonaco} = 20\,\dfrac{kN}{m^3}\cdot 0.01\,\si{m} = 0.20\,\dfrac{kN}{m^2}
 \end{align*}
 
-Discorso diverso per quanto riguarda le divisorie interne. Il peso per unitÃ  di lunghezza della tramezza in laterizio Ã¨ di 
+Discorso diverso per quanto riguarda le divisorie interne. Il peso per unitÃ  di lunghezza della tramez% !TeX spellcheck = it_IT
+% !TeX encoding = UTF-8za in laterizio Ã¨ di 
 \begin{align*}
  G_{2, div} &= \gamma_{div} \cdot s_{div} \cdot H_{div} + 2 \cdot \gamma_{intonaco} \cdot s_{intonaco} \cdot h_{div} =\\ &= 8.00\,\dfrac{kN}{m^3}\cdot 0.08\,\si{m} \cdot (3.10 - 0.25)\,\si{m} + 20\,\dfrac{kN}{m^3}\cdot 0.01\,\si{m} \cdot (3.10 - 0.25 - 0.01)\,\si{m}=\\ &= 2.96\,\dfrac{kN}{m}
  \end{align*}
@@ -72,7 +77,7 @@ Sommando i contributi dei singoli carichi distribuiti si ottiene il valore final
  \end{align*}
 
 \subsubsection*{Tamponamenti perimetrali}
-Il peso della muratura perimetrale ricade nei carichi permanenti non strutturali. Secondo quanto descritto nel capitolo~\ref{chap:intro}, la stratigrafia della parete Ã¨ quella descritta in figura~\ref{fig:stratigrafiaTamponamento}
+Il peso della muratura perimetrale ricade nei carichi permanenti non strutturali. Secondo quanto descritto nel capitolo~\ref{chap:intro}, la stratigrafia della parete è quella descritta in figura~\ref{fig:stratigrafiaTamponamento}
 
 \begin{figure}
  \centering
@@ -101,7 +106,7 @@ Il peso della muratura perimetrale ricade nei carichi permanenti non strutturali
  \label{fig:stratigrafiaTamponamento}
 \end{figure}
 
-Il carico, che risulterÃ  essere distribuito lungo una linea e gravante direttamente sulla trave, ha valore
+Il carico, che risulterà essere distribuito lungo una linea e gravante direttamente sulla trave, ha valore
 \begin{align*}
  G_{2k, tamp} &= \gamma_{tamp} \cdot s_{tamp} \cdot h_{piano} + \gamma_{cappotto} \cdot s_{cappotto} \cdot h_{piano} + \gamma_{intonaco} \cdot s_{intonaco} \cdot h_{piano} =\\
  &= \left(10\,\dfrac{kN}{m^3}\cdot 0.30\,\si{m} + 0.20\,\dfrac{kN}{m^3}\cdot 0.12\,\si{m} + 20\,\dfrac{kN}{m^3}\cdot 0.01\,\si{m}\right)\cdot 2.85\,\si{m} = 9.20\,\dfrac{kN}{m}
@@ -109,7 +114,7 @@ Il carico, che risulterÃ  essere distribuito lungo una linea e gravante direttam
 
 
 \subsection{Carichi variabili}
-Come giÃ  detto in precedenza, la trave Ã¨ una trave perimetrale che divide due ambienti: un ambiente interno adibito a uffici aperti al pubblico e una terrazza esterna soggetta alle azioni meteorologiche. Si ha la necessitÃ , anche in questo caso, di suddividere i carichi variabili dei due differenti ambienti.
+Come già detto in precedenza, la trave è una trave perimetrale che divide due ambienti: un ambiente interno adibito a uffici aperti al pubblico e una terrazza esterna soggetta alle azioni meteorologiche. Si ha la necessitÃ , anche in questo caso, di suddividere i carichi variabili dei due differenti ambienti.
 
 \subsubsection*{Solaio interno}
 Il solaio interno deve essere progettato per sostenere degli uffici aperti al pubblico. Seguendo quanto descritto nelle \emph{NTC 2018}, in particolare nella \textbf{Tab. 3.1.II}, la categoria in cui si ricade Ã¨ la \emph{B2}. 
@@ -139,18 +144,49 @@ L'edificio si trova in \emph{Provincia di Trento}, il che ricade nella zona di c
  \end{cases}
 \end{align*}
 
-L'altitutide Ã¨ $788\,\si{m} > 200\,\si{m}$ per cui
+L'altitutide è $788\,\si{m} > 200\,\si{m}$ per cui
+
 \[
  q_{sk} = 1.39\,\left[ 1 + \left(\dfrac{788}{728}\right)^2\right] = 3.02\,\dfrac{kN}{m^2}
 \]
 
-PoichÃ© non sono presenti informazioni riguardo la localizzazione e quindi l'esposizione dell'edificio al vento che produrrebbe una rimozione della neve sulla copertura, si considera la topografia dell'area \emph{normale}, cioÃ¨ si assume
+Poiché non sono presenti informazioni riguardo la localizzazione e quindi l'esposizione dell'edificio al vento che produrrebbe una rimozione della neve sulla copertura, si considera la topografia dell'area \emph{normale}, cioÃ¨ si assume
 \[
  C_E = 1
 \]
 
 Inoltre, non avendo documenti che descrivono il fenomeno di scioglimento della neve causato dal riscaldamento prodotto all'interno dell'edifico, si assume cautelativamente il coefficiente termico unitario
-\[C_t = 1.\]
+\[C_t = 1\]
+
+Come riportato nella \emph{circolare n. 7 del 2019} al \textbf{capitolo C3.4.3}, nel caso in esame si devono considerare due diversi coefficienti di forma per la copertura:
+\begin{itemize}
+	\item coefficiente di forma per copertura piana
+	\[
+		\mu_1 = 0.8
+	\]
+	\item coefficiente di forma per copertura adiacente o vicina a costruzioni più alte (\textbf{capitolo C3.4.3.3.2}).
+\end{itemize}
+
+Nel secondo caso, la circolare considera un effetto dovuto allo scivolamento della neve dalla copertura (inclinata) posta a quota superiore ($\mu_s$) e un effetto di deposito, dovuto al vento, in corrispondenza della parete verticale che delimita le due coperture.
+
+Poiché la copertura superiore è piana, la quota parte dello scivolamento risulta non esserci; di conseguenza si assume
+\[
+	\mu_s = 0
+\]
+
+Al contrario è presente il contributo dovuto all'accumulo che è calcolato come segue:
+\begin{figure}
+	\centering
+	\begin{tikzpicture}
+		\draw (0,0) -- (0,2) -- (10,2) -- (10, 6) -- (12, 6);
+		\draw [thick, pattern=north east lines] (0,2.5) --  (9.5, 2.5) -- (9.5, 4.5) -- (0,3.5) --cycle; 
+	\end{tikzpicture}
+
+\end{figure}
+
+
+
+
 
 
 

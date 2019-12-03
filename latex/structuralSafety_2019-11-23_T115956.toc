@@ -1,0 +1,10 @@
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\contentsline {chapter}{\numberline {1}Introduzione}{1}% 
+\contentsline {section}{\numberline {1.1}Descrizione dell'edificio}{1}% 
+\contentsline {section}{\numberline {1.2}Caratteristiche geometriche}{2}% 
+\contentsline {chapter}{\numberline {2}Trave}{9}% 
+\contentsline {section}{\numberline {2.1}Analisi dei Carichi}{9}% 
+\contentsline {subsection}{\numberline {2.1.1}Carichi permanenti strutturali}{9}% 
+\contentsline {subsection}{\numberline {2.1.2}Carichi permanenti non strutturali}{10}% 
+\contentsline {subsection}{\numberline {2.1.3}Carichi variabili}{11}% 
