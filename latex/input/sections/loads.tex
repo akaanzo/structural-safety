@@ -116,6 +116,43 @@ Il solaio interno deve essere progettato per sostenere degli uffici aperti al pu
 
 Si deduce che il valore del sovraccarico è di 
 \[
- q_{k, CAT.\,B2} = 3\,\dfrac{kN}{m^3}
+ q_{k, CAT.\,B2} = 3\,\dfrac{kN}{m^2}
 \]
+
+\subsubsection*{Terrazza}
+Sul solaio della terrazza si deve tener conto e del carico variabile della categoria definita sopra (con riferimento al valore per \emph{balconi} e \emph{ballatoi}) e delle azioni dei fenomeni meteorologici quali neve e vento. In ordine si trova
+\[
+ q_{k, CAT.B}^{balconi} = 4\,\dfrac{kN}{m^2}
+\]
+
+Il carico dovuto alla neve è calcolato seguendo quanto scritto nel \textbf{capitolo 3.4} delle \emph{NTC 2018}. In particolare, la \emph{[3.4.1]} definisce il carico provocato dalla neve sulla copertura
+\[
+ q_s = q_{sk}\cdot \mu_i \cdot C_E \cdot C_t
+\]
+
+L'edificio si trova in \emph{Provincia di Trento}, il che ricade nella zona di carico neve \textbf{'I - Alpina'} che gli conferisce un carico di neve al suolo pari a
+\begin{align*}
+ q_{sk} = 
+ \begin{cases}
+    1.50\,\dfrac{kN}{m^2}\quad &\text{se } a_s < 200\,\si{m}\\\\
+    1.39\,\left[ 1 + \left(\dfrac{a_s}{728}\right)^2\right]\,\left[\dfrac{kN}{m^2}\right]\quad &\text{se } a_s > 200\,\si{m}
+ \end{cases}
+\end{align*}
+
+L'altitutide è $788\,\si{m} > 200\,\si{m}$ per cui
+\[
+ q_{sk} = 1.39\,\left[ 1 + \left(\dfrac{788}{728}\right)^2\right] = 3.02\,\dfrac{kN}{m^2}
+\]
+
+Poiché non sono presenti informazioni riguardo la localizzazione e quindi l'esposizione dell'edificio al vento che produrrebbe una rimozione della neve sulla copertura, si considera la topografia dell'area \emph{normale}, cioè si assume
+\[
+ C_E = 1
+\]
+
+Inoltre, non avendo documenti che descrivono il fenomeno di scioglimento della neve causato dal riscaldamento prodotto all'interno dell'edifico, si assume cautelativamente il coefficiente termico unitario
+\[C_t = 1.\]
+
+
+
+
 
