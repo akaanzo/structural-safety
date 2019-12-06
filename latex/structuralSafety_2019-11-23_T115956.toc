@@ -11,3 +11,6 @@
 \contentsline {paragraph}{Carico neve}{12}% 
 \contentsline {paragraph}{Carico vento}{16}% 
 \contentsline {section}{\numberline {2.2}Soluzione statica della trave}{18}% 
+\contentsline {subsection}{\numberline {2.2.1}Lunghezze di influenza}{25}% 
+\contentsline {subsection}{\numberline {2.2.2}Carichi agenti sulla trave}{26}% 
+\contentsline {subsection}{\numberline {2.2.3}Coefficienti}{26}% 
