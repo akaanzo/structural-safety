@@ -1,2 +1,8 @@
 .ipynb
 .ipynb_checkpoints
+latex/*.aux
+latex/*.lof
+latex/.log
+latex/*.lot
+latex/*.synctex.gz
+latex/*.toc
