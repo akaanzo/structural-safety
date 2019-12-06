@@ -8,3 +8,6 @@
 \contentsline {subsection}{\numberline {2.1.1}Carichi permanenti strutturali}{9}% 
 \contentsline {subsection}{\numberline {2.1.2}Carichi permanenti non strutturali}{10}% 
 \contentsline {subsection}{\numberline {2.1.3}Carichi variabili}{11}% 
+\contentsline {paragraph}{Carico neve}{12}% 
+\contentsline {paragraph}{Carico vento}{16}% 
+\contentsline {section}{\numberline {2.2}Soluzione statica della trave}{18}% 

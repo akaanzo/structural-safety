@@ -1,10 +1,9 @@
-% !TeX spellcheck = it_IT
-% !TeX encoding = UTF-8
 \documentclass[a4paper, oneside, openright]{report}
-
 \usepackage[T1]{fontenc}
-\usepackage{geometry}
 \usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+
+\usepackage{geometry}
 \usepackage[italian]{babel}
 \usepackage{booktabs}
 \usepackage{tikz}
@@ -23,6 +22,35 @@
 \usepackage{lipsum}
 \usepackage{siunitx}
 \usepackage[final]{pdfpages}
+\usepackage{layouts}
+\usepackage{listings}
+\usepackage{multirow}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}
 
 \newcommand{\contentinput}[1]{\input{input/#1}}
 
@@ -33,11 +61,16 @@
 \newcommand{\blankpage}{\newpage\shipout\null\stepcounter{page}}%
 \def\doubleunderline#1{\underline{\underline{#1}}}%
 
+\newcommand{\sfav}{\textcolor{red}{\MakeUppercase{sf}}}%
+\newcommand{\fav}{\textcolor{green}{\MakeUppercase{f}}}%
+
+
 \begin{document}
 \contentinput{title}
 \contentinput{toc}
 \contentinput{intro}
 \contentinput{beam}
+\contentinput{sections/staticSolution}
 
 
 
