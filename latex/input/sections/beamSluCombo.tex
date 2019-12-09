@@ -1,1 +1,56 @@
 \section{Combinazione agli SLU}
+Il \textbf{capitolo 2.5.3} delle \emph{NTC 2018} descrive, ai fini delle verifiche agli stati limite, le varie combinazioni delle azioni. 
+
+La combinazione fondamentale, impiegata per il calcolo agli \emph{stati limite ultimi} è descritta dalla \emph{[2.5.1]} ed è così formulata
+\[
+	\gamma_{G1}\cdot G_{1k} + \gamma_{G2}\cdot G_{2k} + \gamma_{Q1} \cdot Q_{1k} + \gamma_{Q2}\cdot \psi_{02}\cdot Q_{2k} + \gamma_{Q3}\cdot \psi_{03}\cdot Q_{3k} + \dots
+\]
+
+Si riportano di seguito il calcolo dei carichi distribuiti secondo la formulazione agli SLU, in funzione dei tratti di trave in esame.
+
+Ricordando che si sta trattando una trave di bordo, saranno necessarie diverse combinazioni di carico per valutare la massima azione sulla trave. È comunque evidente che sovraccarichi di minor rilevanza, in termini di azione, daranno un contributo molto minore rispetto a sovraccarichi più elevati. Verranno tralasciati, pertanto, le combinazioni ove questi sovraccarichi risultano essere principali.
+
+\subsubsection*{Trave $P13\div P16$}
+Dalla tabella~\ref{tab:azioniTrave} si può vedere che i carichi che generano un'azione di maggior rilievo sono quelli di categoria (B) della terrazza e il carico da neve. Verranno, perciò, calcolate due sole combinazioni.
+
+\paragraph{Combinazione 1: neve principale}
+Nella combinazione per cui l'azione della neve è principale, le altre azioni saranno ridotte di un fattore che dipende dalla categoria di cui fanno parte.
+
+\begin{align*}
+	Q_{11}^{max} &=\gamma_{G1_{SF}}\cdot\left( G_{1k, interno} + G_{1k, terrazza} + G_{1k, trave} \right) +\\
+	&+\gamma_{G2_{SF}}\cdot\left( G_{2k, interno} + G_{2k, terrazza} + G_{2k, tamponamento} \right) +\\
+	&+\gamma_{Q_{SF}}\cdot (Q_{neve} + \psi_{0,CAT.B2,int}\cdot Q_{CAT.B2,int} + \psi_{0,CAT.B2,terr}\cdot Q_{CAT.B2,terr} +\\
+	&+\psi_{0,vento}\cdot Q_{vento}) =\\
+	&= 1.3\cdot(8+11.52 + 3.75)	+1.5\cdot(11.55+7.98 + 9.20) + 1.5\cdot(15.01) +\\
+	&+1.5\cdot(0.7\cdot7.5+ 0.7\cdot 14.40 + 0.6\cdot 0.5) = \\
+	&= 	119.306\,kN
+\end{align*}
+
+
+
+
+
+
+\paragraph{Combinazione 2: categoria B (terrazza) principale}
+
+\begin{align*}
+	Q_{12}^{max} &= 1.3\cdot(8+11.52 + 3.75) 
+	+1.5\cdot(11.55+7.98 + 9.20) +\\
+	&+1.5\cdot(0.5\cdot 15.01 + 0.7\cdot7.5+ 14.40 + 0.6\cdot 0.5) = \\
+	&= 	114.345\,kN
+\end{align*}
+
+\paragraph{Combinazione 3: vento principale}
+Per valutare il minimo, viene considerata l'azione del vento che 'alleggerisce' la trave, quella cioè con valore negativo.
+
+\begin{align*}
+	Q_{13}^{min} &=\gamma_{G1_{F}}\cdot\left( G_{1k, interno} + G_{1k, terrazza} + G_{1k, trave} \right) +\\
+	&+\gamma_{G2_{F}}\cdot\left( G_{2k, interno} + G_{2k, terrazza} + G_{2k, tamponamento} \right) +\\
+	&+\gamma_{Q_{F}}\cdot (\psi_{0,neve}\cdot Q_{neve} + \psi_{0,CAT.B2,int}\cdot Q_{CAT.B2,int} + \psi_{0,CAT.B2,terr}\cdot Q_{CAT.B2,terr}) +\\
+	&+ \gamma_{vento_{SF}}\cdot Q_{vento} =\\
+	&= 1\cdot(8+11.52 + 3.75) +0.8 \cdot(11.55+7.98 + 9.20) +\\
+	&+ 0\cdot(0.5\cdot 15.01 + 0.7\cdot7.5+ 0.7\cdot 10.80) - 1.5\cdot 0.5 = \\
+	&= 	45.50\,kN
+\end{align*}
+
+
