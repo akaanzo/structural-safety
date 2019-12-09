@@ -10,7 +10,9 @@ Si riportano di seguito il calcolo dei carichi distribuiti secondo la formulazio
 
 Ricordando che si sta trattando una trave di bordo, saranno necessarie diverse combinazioni di carico per valutare la massima azione sulla trave. È comunque evidente che sovraccarichi di minor rilevanza, in termini di azione, daranno un contributo molto minore rispetto a sovraccarichi più elevati. Verranno tralasciati, pertanto, le combinazioni ove questi sovraccarichi risultano essere principali.
 
-\subsubsection*{Trave $P13\div P16$}
+\subsection{Calcolo delle azioni massime e minime}
+
+\subsubsection*{Tratto $P13\div P16$}
 Dalla tabella~\ref{tab:azioniTrave} si può vedere che i carichi che generano un'azione di maggior rilievo sono quelli di categoria (B) della terrazza e il carico da neve. Verranno, perciò, calcolate due sole combinazioni.
 
 \paragraph{Combinazione 1: neve principale}
@@ -31,7 +33,7 @@ Nella combinazione per cui l'azione della neve è principale, le altre azioni sa
 
 
 
-\paragraph{Combinazione 2: categoria B (terrazza) principale}
+\paragraph{Combinazione 2: categoria B2 (terrazza) principale}
 
 \begin{align*}
 	Q_{12}^{max} &= 1.3\cdot(8+11.52 + 3.75) 
@@ -53,4 +55,215 @@ Per valutare il minimo, viene considerata l'azione del vento che 'alleggerisce' 
 	&= 	45.50\,kN
 \end{align*}
 
+I valori massimo e minimo sul primo tratto di trave per la combinazione agli SLU sono rispettivamente la combinazione con il carico da neve principale e la combinazione con l'azione del vento principale.
 
+\begin{equation}
+		\label{eq:Q1maxmin_slu}
+		\begin{cases}
+			Q_{1,max} = 119.306\,kN\\
+			Q_{1, min} = 45.50\,kN
+		\end{cases}
+\end{equation}
+
+\subsubsection*{Tratto $P16\div P17$}
+
+\paragraph{Combinazione 1: neve principale}
+
+\begin{align*}
+	Q_{21}^{max} &= 1.3\cdot(8.00 +6.72 + 3.75) + 1.5\cdot(11.55+4.65 + 9.20) + 1.5\cdot(10.30)+\\
+	&+ 1.5\cdot0.7\cdot(7.50+8.40) + 1.5\cdot0.6\cdot0.3 =\\
+	&= 	94.526\,kN
+\end{align*}
+
+\paragraph{Combinazione 2: categoria B2 (terrazza) principale}
+
+\begin{align*}
+	Q_{22}^{max} &= 1.3\cdot(8.00 +6.72 + 3.75) + 1.5\cdot(11.55+4.65 + 9.20) + 1.5\cdot8.40+\\
+	&+ 1.5\cdot(0.7\cdot7.50+ 0.5\cdot 10.30 + 0.6\cdot0.3) =\\
+	&= 	90.581\,kN
+\end{align*}
+
+\paragraph{Combinazione 3: vento principale}
+
+\begin{align*}
+	Q_{23}^{min} &= 1\cdot(8.00 +6.72 + 3.75) + 0.8\cdot(11.55+4.65 + 9.20) +\\
+	&+ 0\cdot(0.7\cdot 8.40 + 0.7\cdot7.50+ 0.5\cdot 10.30) -1.5\cdot0.3 =\\
+	&= 	38.34\,kN
+\end{align*}
+
+Come nel tratto precedente, il massimo e il minimo coincidono con la combinazione con neve principale e la combinazione con vento principale.
+
+\begin{equation}
+		\label{eq:Q2maxmin_slu}
+		\begin{cases}
+			Q_{2,max} = 94.526\,kN\\
+			Q_{2, min} = 38.34\,kN
+		\end{cases}
+\end{equation}
+
+\subsubsection*{Tratto $P17$ - vano scala}
+
+\paragraph{Combinazione 1: neve principale}
+
+\begin{align*}
+	Q_{31}^{max} &= 1.3\cdot(8.00+3.20 + 3.75) + 1.5\cdot(11.55+2.215 + 9.20) + 1.5\cdot(4.17) +\\
+	&+1.5\cdot0.7\cdot(7.50+4.00) + 1.5\cdot0.6\cdot0.138 =\\
+	&= 	72.337\,kN
+\end{align*}
+
+\paragraph{Combinazione 2: categoria B2 (terrazza) principale}
+
+\begin{align*}
+	Q_{32}^{max} &= 1.3\cdot(8.00+3.20 + 3.75) + 1.5\cdot(11.55+2.215 + 9.20) + 1.5\cdot(4.00) +\\
+	&+1.5\cdot(0.7\cdot7.50+ 0.5\cdot4.17 + 0.6\cdot 0.138) =\\
+	&=  69.69\,kN
+\end{align*}
+
+\paragraph{Combinazione 3: categoria B2 (interno) principale}
+
+\begin{align*}
+	Q_{33}^{max} &= 1.3\cdot(8.00+3.20 + 3.75) + 1.5\cdot(11.55+2.215 + 9.20) + 1.5\cdot(7.50) +\\
+	&+1.5\cdot(0.7\cdot4.00+ 0.5\cdot4.17 + 0.6\cdot 0.138) =\\
+	&=  71.26\,kN
+\end{align*}
+
+\paragraph{Combinazione 4: vento principale}
+
+\begin{align*}
+	Q_{34}^{min} &= 1\cdot(8.00+3.20 + 3.75) + 0.8\cdot(11.55+2.215 + 9.20) +\\
+	&+0\cdot(0.7 \cdot 7.50 + 0.7\cdot4.00+ 0.5\cdot4.17) - 1.5\cdot 0.138 =\\
+	&=  33.115\,kN
+\end{align*}
+
+I valori massimo e minimo sono
+
+\begin{equation}
+		\label{eq:Q3maxmin_slu}
+		\begin{cases}
+			Q_{3,max} = 72.337\,kN\\
+			Q_{3, min} = 33.115\,kN
+		\end{cases}
+\end{equation}
+
+\subsection{Combinazioni di carico}
+Sostituendo ora i valori trovati nelle \eqref{eq:Q1maxmin_slu}, \eqref{eq:Q2maxmin_slu} e \eqref{eq:Q3maxmin_slu} all'interno della tabella~\ref{tab:loadCombo} di pagina~\pageref{tab:loadCombo} si possono trovare le otto combinazioni di carico che massimizzano le azioni interne.
+
+\begin{figure}
+     \centering
+     \subfloat[\emph{Combinazione 1: MAX-MIN-MAX-MIN-MAX-MIN}]{
+ \begin{tikzpicture}[xscale=.8]
+ \scaling{.48};
+  \point{p13}{0}{0};
+  \point{p14}{3}{0};
+  \point{p15}{7.5}{0};
+  \point{p16}{11.5}{0};
+  \point{p17}{16.5}{0};
+  \point{p18}{22.65}{0};
+  \point{vs}{26.65}{0};
+  
+  \beam{1}{p13}{vs};
+  
+  \support{1}{p13};
+  \support{2}{p14};
+  \support{2}{p15};
+  \support{2}{p16};
+  \support{2}{p17};
+  \support{2}{p18};
+  \support{2}{vs};
+  
+    
+   
+    \node at (0.8,1.8) {$Q_{1,max}$};
+    \node at (3,1.8) {$Q_{1,min}$};
+    \node at (5.5,1.8) {$Q_{1,max}$};
+    \node at (8.5,1.8) {$Q_{2,min}$};
+    \node at (12,1.8) {$Q_{3,max}$};
+    \node at (14.5,1.8) {$Q_{3,min}$};
+    
+    \lineload{1}{p13}{p14}[1.2][1.2][.08];
+    \lineload{1}{p14}{p15}[.45][.45][.08];
+    \lineload{1}{p15}{p16}[1.2][1.2][.08];
+    \lineload{1}{p16}{p17}[.38][.38][.08];
+    \lineload{1}{p17}{p18}[.73][.73][.08];
+    \lineload{1}{p18}{vs}[.33][.33][.08];
+
+ \end{tikzpicture}\label{fig:sluCombo_1}}\\
+ %
+ \subfloat[\emph{Combinazione 2: MAX-MAX-MIN-MAX-MIN-MAX}]{
+ \begin{tikzpicture}[xscale=.8]
+ \scaling{.48};
+  \point{p13}{0}{0};
+  \point{p14}{3}{0};
+  \point{p15}{7.5}{0};
+  \point{p16}{11.5}{0};
+  \point{p17}{16.5}{0};
+  \point{p18}{22.65}{0};
+  \point{vs}{26.65}{0};
+  
+  \beam{1}{p13}{vs};
+  
+  \support{1}{p13};
+  \support{2}{p14};
+  \support{2}{p15};
+  \support{2}{p16};
+  \support{2}{p17};
+  \support{2}{p18};
+  \support{2}{vs};
+  
+    
+   
+    \node at (0.8,1.8) {$Q_{1,max}$};
+    \node at (3,1.8) {$Q_{1,max}$};
+    \node at (5.5,1.8) {$Q_{1,min}$};
+    \node at (8.5,1.8) {$Q_{2,max}$};
+    \node at (12,1.8) {$Q_{3,min}$};
+    \node at (14.5,1.8) {$Q_{3,max}$};
+    
+    \lineload{1}{p13}{p14}[1.2][1.2][.08];
+    \lineload{1}{p14}{p15}[1.2][1.2][.08];
+    \lineload{1}{p15}{p16}[.45][.45][.08];
+    \lineload{1}{p16}{p17}[.95][.95][.08];
+    \lineload{1}{p17}{p18}[.33][.33][.08];
+    \lineload{1}{p18}{vs}[.73][.73][.08];
+
+ \end{tikzpicture}\label{fig:sluCombo_2}}\\
+ %
+ \subfloat[\emph{Combinazione 1: MIN-MAX-MIN-MAX-MIN-MAX}]{
+ \begin{tikzpicture}[xscale=.8]
+ \scaling{.48};
+  \point{p13}{0}{0};
+  \point{p14}{3}{0};
+  \point{p15}{7.5}{0};
+  \point{p16}{11.5}{0};
+  \point{p17}{16.5}{0};
+  \point{p18}{22.65}{0};
+  \point{vs}{26.65}{0};
+  
+  \beam{1}{p13}{vs};
+  
+  \support{1}{p13};
+  \support{2}{p14};
+  \support{2}{p15};
+  \support{2}{p16};
+  \support{2}{p17};
+  \support{2}{p18};
+  \support{2}{vs};
+  
+    
+   
+    \node at (0.8,1.8) {$Q_{1,min}$};
+    \node at (3,1.8) {$Q_{1,max}$};
+    \node at (5.5,1.8) {$Q_{1,min}$};
+    \node at (8.5,1.8) {$Q_{2,max}$};
+    \node at (12,1.8) {$Q_{3,min}$};
+    \node at (14.5,1.8) {$Q_{3,max}$};
+    
+    \lineload{1}{p13}{p14}[.45][.45][.08];
+    \lineload{1}{p14}{p15}[1.2][1.2][.08];
+    \lineload{1}{p15}{p16}[.45][.45][.08];
+    \lineload{1}{p16}{p17}[.94][.94][.08];
+    \lineload{1}{p17}{p18}[.33][.33][.08];
+    \lineload{1}{p18}{vs}[.73][.73][.08];
+
+ \end{tikzpicture}\label{fig:sluCombo_3}}\\
+ \end{figure}
