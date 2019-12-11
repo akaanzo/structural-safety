@@ -25,6 +25,7 @@
 % \usepackage{layouts}
 \usepackage{listings}
 \usepackage{multirow}
+\usepackage{biblatex}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -64,6 +65,8 @@
 \newcommand{\sfav}{\textcolor{red}{\MakeUppercase{sf}}}%
 \newcommand{\fav}{\textcolor{green}{\MakeUppercase{f}}}%
 
+\addbibresource{input/bib.bib}
+
 
 \begin{document}
 \contentinput{title}
@@ -71,4 +74,7 @@
 \contentinput{intro}
 \contentinput{beam}
 \contentinput{columns}
+\contentinput{conclusions}
+\cleardoublepage
+\printbibliography
 \end{document}
