@@ -41,7 +41,7 @@ Al contrario dei carichi strutturali, che in questo caso sono i medesimi e per i
 
 Discorso diverso per quanto riguarda le divisorie interne. Il peso per unità di lunghezza della tramezza in laterizio è di 
 \begin{align*}
- G_{2, div} &= \gamma_{div} \cdot s_{div} \cdot H_{div} + 2 \cdot \gamma_{intonaco} \cdot s_{intonaco} \cdot h_{div} =\\ &= 8.00\,\dfrac{kN}{m^3}\cdot 0.08\,\si{m} \cdot (3.10 - 0.25)\,\si{m} + 20\,\dfrac{kN}{m^3}\cdot 0.01\,\si{m} \cdot (3.10 - 0.25 - 0.01)\,\si{m}=\\ &= 2.96\,\dfrac{kN}{m}
+ G_{2, div} &= \gamma_{div} \cdot s_{div} \cdot h_{div} + 2 \cdot \gamma_{intonaco} \cdot s_{intonaco} \cdot h_{div} =\\ &= 8.00\,\dfrac{kN}{m^3}\cdot 0.08\,\si{m} \cdot (3.10 - 0.25)\,\si{m} + 20\,\dfrac{kN}{m^3}\cdot 0.01\,\si{m} \cdot (3.10 - 0.25 - 0.01)\,\si{m}=\\ &= 2.96\,\dfrac{kN}{m}
  \end{align*}
  
  La normativa consente di convertire il carico per unità di lunghezza  delle divisorie in un carico uniformemente distribuito su un'area. Per elementi divisori con $2<G_2 \geq 3\,kN/_m$ si ha
@@ -72,7 +72,7 @@ Sommando i contributi dei singoli carichi distribuiti si ottiene il valore final
  \end{align*}
 
 \subsubsection*{Tamponamenti perimetrali}
-Il peso della muratura perimetrale ricade nei carichi permanenti non strutturali. Secondo quanto descritto nel capitolo~\ref{chap:intro}, la stratigrafia della parete è quella descritta in figura~\ref{fig:stratigrafiaTamponamento}
+Il peso della muratura perimetrale ricade nei carichi permanenti non strutturali. Secondo quanto descritto nel capitolo~\ref{chap:intro}, la stratigrafia della parete è quella rappresentata in figura~\ref{fig:stratigrafiaTamponamento}
 
 \begin{figure}
  \centering
@@ -204,8 +204,8 @@ Come rappresentato in figura~\ref{fig:muCircolare}, la lunghezza in cui si forma
 Cioè
 
 \begin{align*}
-  &ls = 2 h = 2\cdot 6.2\,m = 12.4\,m > b_2 = 6\,m\\
-  &ls \in [5, 15]\,m
+  &l_s = 2 h = 2\cdot 6.2\,m = 12.4\,m > b_2 = 6\,m\\
+  &l_s \in [5, 15]\,m
 \end{align*}
 
 Il coefficiente di accumulo sul bordo del terrazzo va calcolato interpolando linearmente; la generica interpolazione è
@@ -320,7 +320,7 @@ Con i dati finora calcolati è possibile valutare la pressione del vento, assume
  q_{cin} = \dfrac{1}{2}\cdot\rho\, v_r^2 = \dfrac{1}{2}\,1.25\,\dfrac{kg}{m^3}\cdot\left(25\,\dfrac{m}{s}\right)^2 = 390.625\,Pa
 \]
 
-La pressione del vento è quindi data dalla seguente formula (\emph{[3.3.4]}
+La pressione del vento è quindi data dalla seguente formula (\emph{[3.3.4]})
 \[
  p = q_{cin}\cdot c_e\cdot c_p\cdot c_d
 \]
@@ -337,7 +337,7 @@ Il coefficiente di esposizione $c_e$ dipende da vari parametri come l'altezza da
 L'altezza totale dell'edificio è di $9.7\,m$ che risulta essere superiore alla $z_{min} = 8\,m$. Come specificato nella \emph{[3.3.7]} il coefficiente di esposizione va calcolato come
 \begin{align*}
  c_e(z) &= k_r^2 \, c_t\,\ln\left(\dfrac{z}{z_0}\right)\,\left[ 7 + c_t\,\ln\left(\dfrac{z}{z_0}\right)\right] = \\
- &= 0.22^2 \cdot 1\cdot \ln\left(\dfrac{9.70}{0.30}\right)\,\left[ 7 + 1\,\ln\left(\dfrac{9.70}{0.30}\right)\right] = 1.76
+ &= 0.22^2 \cdot 1\cdot \ln\left(\dfrac{9.70}{0.30}\right)\,\left[ 7 + 1\cdot\ln\left(\dfrac{9.70}{0.30}\right)\right] = 1.76
 \end{align*}
 in cui si è assunto il coefficiente di topografia $c_t = 1$, come consigliato nella normativa.
 
